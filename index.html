@@ -1,64 +1,339 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Future Concept</title>
-
-    <link rel="stylesheet" href="estilos.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eduardo Beretta</title>
+  <link rel="stylesheet" href="public/style.css">
+  <link rel="shortcut icon" href="public/svgs/logo.svg" type="image/x-icon">
 </head>
+
 <body>
 
-    
-    <div class="top-menu">
-        <div>
-            <a href="index.html">HOME</a>
-            <a href="sobre.html">SOBRE</a>
-            <a href="projetos.html">PROJETOS</a>
-            <a href="servicos.html">SERVIÇOS</a>
-            <a href="contato.html">CONTATO</a>
-        </div>
-        <div>
-            <a href="#">ENG</a>
-        </div>
+  <div id="navbar"></div>
+  <script>
+    //Carregar conteúdo do navbar
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      })
+      .catch(error => {
+        console.error('Erro ao carregar o navbar:', error);
+      });
+  </script>
+
+  <section id="home-page">
+    <img src="public/svgs/fundo-preto.svg" class="fundo">
+    <div class="fundo-retangulo"></div>
+
+    <div class="text-home">
+      <h1 class="title">EDUARDO BERETTA</h1>
+      <p class="subtitle">PROGRAMADOR</p>
     </div>
 
-    
-    <div class="container">
-        
-        <div class="left">
-            <div class="subtitle">AQUI E AGORA</div>
-            <div class="title">FUTURO</div>
+    <div class="social-container">
+      <a href="https://www.linkedin.com/in/eduardo-beretta-a597ba356/" target="_blank" class="social-link">
+        <img src="public/svgs/linkedin.svg" alt="LinkedIn" class="social-icon">
+      </a>
+      <a href="https://github.com/eduardoberettarod" target="_blank" class="social-link">
+        <img src="public/svgs/github.svg" alt="GitHub" class="social-icon">
+      </a>
+      <a href="public/assets/curriculo.pdf" download="curriculo-eduardo-beretta.pdf" class="social-link">
+        <img src="public/svgs/file-earmark-person-fill.svg" alt="Baixar Currículo" class="social-icon">
+      </a>
+    </div>
 
-            <p class="text">
-                Pessoas que pensam sobre o futuro, sobre como melhorar suas vidas e agir nesta direção, têm um plano de ação.
-            </p>
+    <div class=" container-cubo">
+      <img src="public/imgs/bola-verde.png" alt="efeito de luz" class="bola">
+      <img src="public/svgs/cubo.svg" alt="cubo" class="cubo">
+    </div>
+    <div class="scroll">
+      <p>SCROLL</p>
+    </div>
+  </section>
+  <section id="sobre">
+    <div class="container-hand">
+      <img src="public/svgs/hand.svg" class="hand" alt="Mão">
+    </div>
+    <div class="container-sobre">
+      <h1 class="titulo-sobre">Sobre</h1>
+      <div class="card-sobre">
+        <p class="texto-sobre">
+          Sou um <span style="color: var(--cor-primaria);">desenvolvedor web</span> especializado na criação de
+          aplicações modernas, funcionais e responsivas. Meu objetivo é transformar ideias em <span
+            style="color: var(--cor-primaria);">soluções digitais eficientes,</span> unindo design intuitivo a um código
+          de alta qualidade. Tenho paixão por tecnologia e estou sempre explorando novas ferramentas para aprimorar meu
+          trabalho. O que me proponho a fazer, <span style="color: var(--cor-primaria);">faço com excelência e
+            dedicação.</span>
+        </p>
+      </div>
+      <h2 class="titulo-soft-skills">Soft Skills</h2>
+      <div class="soft-skills">
+        <div class="skill-card"><img src="public/svgs/lightbulb.svg"></i> Pensamento Analítico e Inovador</div>
+        <div class="skill-card"><img src="public/svgs/book.svg"></i> Aprendizagem Contínua</div>
+        <div class="skill-card"><img src="public/svgs/palette.svg"></i> Criatividade</div>
+        <div class="skill-card"><img src="public/svgs/shield-check.svg"></i> Resiliência</div>
+        <div class="skill-card"><img src="public/svgs/arrow-repeat.svg"></i> Flexibilidade</div>
+        <div class="skill-card"><img src="public/svgs/emoji-smile.svg"></i> Inteligência Emocional</div>
+      </div>
 
-            <a class="btn" href="#">LET’S GO</a>
+    </div>
+  </section>
+  <section id="projetos">
+    <span class="circulo"></span>
 
-            <div class="bottom-info">
-                <div>
-                    <div class="bottom-title">TECHNOLOGY</div>
-                    <div class="bottom-text">
-                        Soluções que alteram o amanhã, com pensamento adaptativo e visão estratégica.
-                    </div>
-                </div>
-                <div>
-                    <div class="bottom-title">INNOVATION</div>
-                    <div class="bottom-text">
-                        Transformando ideias em realidade através de design e criatividade avançada.
-                    </div>
-                </div>
+    <div class="container-projetos">
+      <h1 class="titulo-projetos">Projetos</h1>
+
+      <div class="cards-projetos">
+
+        <!-- Projeto 1 -->
+        <div class="projeto-item">
+          <a href="https://eduardoberettarod.github.io/CyberLab/" target="_blank" class="projeto-img-wrapper">
+            <img src="public/imgs/cyberlab.png" alt="projeto cyberlab">
+          </a>
+          <h2>CyberLab</h2>
+          <a class="ver-github" href="https://github.com/eduardoberettarod/CyberLab" target="_blank">Ver no GitHub</a>
+          <p>Plataforma educacional interativa sobre cibersegurança, com recursos 3D e animações avançadas.</p>
+          <button class="botao-fullscreen" data-img="public/imgs/cyberlab.png" data-title="CyberLab"
+            data-mes-ano="Maio 2025"
+            data-desc="Plataforma educacional interativa sobre cibersegurança, com recursos 3D e animações avançadas."
+            data-link="https://eduardoberettarod.github.io/CyberLab/">
+          </button>
+        </div>
+
+        <!-- Projeto 2 -->
+        <div class="projeto-item">
+          <a href="https://eduardoberettarod.github.io/RastroUrbanoGitDesktop/" target="_blank"
+            class="projeto-img-wrapper">
+            <img src="public/imgs/rastro-urbano.png" alt="projeto rastro-urbano">
+          </a>
+          <h2 id="rastro-urbano">Rastro Urbano</h2>
+          <a class="ver-github" href="https://github.com/eduardoberettarod/RastroUrbanoGitDesktop" target="_blank">Ver
+            no GitHub</a>
+          <p>Loja virtual responsiva com design moderno e interações dinâmicas.</p>
+          <button class="botao-fullscreen" data-img="public/imgs/rastro-urbano.png" data-title="Rastro Urbano"
+            data-mes-ano="Abril 2025" data-desc="Loja virtual responsiva com design moderno e interações dinâmicas."
+            data-link="https://eduardoberettarod.github.io/RastroUrbanoGitDesktop/">
+          </button>
+        </div>
+
+        <!-- Projeto 3 -->
+        <div class="projeto-item">
+          <a href="https://eduardoberettarod.github.io/Portfolio-EB/" target="_blank" class="projeto-img-wrapper">
+            <img src="public/imgs/portfolio.png" alt="projeto portfolio">
+          </a>
+          <h2>Portfólio</h2>
+          <a class="ver-github" href="https://github.com/eduardoberettarod/Portfolio-EB" target="_blank">Ver no
+            GitHub</a>
+          <p>Site responsivo para apresentar meus projetos, construído com React e Bootstrap.</p>
+          <button class="botao-fullscreen" data-img="public/imgs/portfolio.png" data-title="Portfólio"
+            data-mes-ano="Agosto 2025"
+            data-desc="Site responsivo para apresentar meus projetos, construído com React e Bootstrap."
+            data-link="https://github.com/eduardoberettarod/Portfolio-EB"></button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Lightbox fora do grid -->
+    <div id="lightbox" class="lightbox">
+      <div class="lightbox-caixa">
+        <button class="fechar" aria-label="Fechar lightbox">&times;</button>
+        <div class="card-projeto">
+          <div class="col-esquerda">
+            <img id="lb-img" src="" alt="" />
+            <a id="lb-link" href="#" target="_blank" class="btn-previa">
+              Prévia
+              <img src="public/svgs/display.svg" alt="Ícone Prévia" class="icon-previa" />
+            </a>
+          </div>
+          <div class="col-direita">
+            <div class="info nome">
+              <h3>Nome do projeto</h3>
+              <h2 id="lb-titulo"></h2>
             </div>
+            <div class="info ano-mes">
+              <h3>Data de criação</h3>
+              <p id="lb-ano"></p>
+            </div>
+            <div class="info descricao">
+              <h3>Descrição</h3>
+              <p id="lb-desc"></p>
+            </div>
+          </div>
         </div>
-
-        
-        <div class="right">
-            <img class="robot-img" src="https://i.imgur.com/0ZfS4bM.png" alt="Futuristic Robot">
-        </div>
+      </div>
     </div>
 
-</body>
-</html>
 
+  </section>
+  <section id="serviços">
+    <div class="container-linha">
+      <img class="linha" src="public/svgs/linha.svg" alt="efeito visual">
+    </div>
+    <div class="container-serviços">
+      <h1 class="titulo-serviços">
+        Serviços
+      </h1>
+      <div class="cards-servicos">
+
+        <div class="servico-card">
+          <div class="servico-header">
+            <h3>Criação de Sites Responsivos</h3>
+            <span class="status disponivel">Disponível</span>
+          </div>
+          <ul>
+            <li>Design moderno e adaptável</li>
+            <li>Performance otimizada</li>
+            <li>Compatível com todos os dispositivos</li>
+          </ul>
+        </div>
+
+        <div class="servico-card">
+          <div class="servico-header">
+            <h3>Aplicações Web Interativas</h3>
+            <span class="status em-breve">Em breve</span>
+          </div>
+          <ul>
+            <li>Interfaces dinâmicas</li>
+            <li>Integração com APIs</li>
+            <li>Experiência fluida</li>
+          </ul>
+        </div>
+
+        <div class="servico-card">
+          <div class="servico-header">
+            <h3>Teste de Penetração (Pentest)</h3>
+            <span class="status em-breve" id="diferente">Em breve</span>
+          </div>
+          <ul>
+            <li>Identificação de vulnerabilidades</li>
+            <li>Relatórios detalhados</li>
+            <li>Correções recomendadas</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="container-skills">
+        <div class="container-tecnologias">
+          <h2>
+            Tecnologias
+          </h2>
+          <div class="icons-tecnologias">
+            <div class="tecnologia-card">
+              <img src="public/svgs/bootstrap.svg" alt="Bootstrap" class="tecnologias">
+              <span>Bootstrap</span>
+            </div>
+
+            <div class="tecnologia-card">
+              <img src="public/svgs/html.svg" alt="HTML" class="tecnologias">
+              <span>HTML</span>
+            </div>
+
+            <div class="tecnologia-card">
+              <img src="public/svgs/css.svg" alt="CSS" class="tecnologias">
+              <span>CSS</span>
+            </div>
+
+            <div class="tecnologia-card">
+              <img src="public/svgs/github.svg" alt="GitHub" class="tecnologias">
+              <span>GitHub</span>
+            </div>
+
+            <div class="tecnologia-card">
+              <img src="public/svgs/javascript.svg" alt="JavaScript" class="tecnologias">
+              <span>JavaScript</span>
+            </div>
+
+            <div class="tecnologia-card">
+              <img src="public/svgs/python.svg" alt="Python" class="tecnologias">
+              <span>Python</span>
+            </div>
+
+            <div class="tecnologia-card">
+              <img src="public/svgs/react.svg" alt="React" class="tecnologias">
+              <span>React</span>
+            </div>
+
+            <div class="tecnologia-card">
+              <img src="public/svgs/git.svg" alt="Git" class="tecnologias">
+              <span>Git</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contato">
+    <div class="container-corrente">
+      <img src="public/svgs/corrente.svg" class="corrente" alt="corrente">
+      <img src="public/svgs/orbita.svg" class="orbita" alt="orbita">
+    </div>
+
+    <div class="container-titulo-contato">
+      <h1 class="titulo-contato">Contato</h1>
+    </div>
+    <div class="container-contato">
+
+      <!-- Card de Contato -->
+      <div class="card-form">
+        <h1>Entre em contato</h1>
+        <form>
+          <label>Primeiro Nome</label>
+          <input type="text" placeholder="Seu primeiro nome*" required>
+
+          <label>Sobrenome</label>
+          <input type="text" placeholder="Seu sobrenome*" required>
+
+          <label>E-mail</label>
+          <input type="email" placeholder="Seu e-mail*" required>
+
+          <label>Mensagem</label>
+          <textarea placeholder="Escreva sua mensagem*" required></textarea>
+
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+
+      <!-- Cards da direita -->
+      <div class="cards-lado">
+
+        <!-- Card Redes Sociais -->
+
+        <h1 class="redes-contato">Redes Sociais</h1>
+        <div class="redes">
+          <a href="https://github.com/eduardoberettarod" target="_blank"><img src="public/svgs/github.svg"></a>
+          <a href="https://www.linkedin.com/in/eduardo-beretta-a597ba356/" target="_blank"><img
+              src="public/svgs/linkedin.svg"></a>
+        </div>
+
+        <div class="card-info" id="cv">
+          <h1>Baixar CV</h1>
+          <a href="curriculo.pdf" download="curriculo-eduardo-beretta.pdf" class="btn-download">Download PDF</a>
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </section>
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Eduardo Beretta — Todos os direitos reservados.</p>
+      <div class="footer-links">
+        <a href="https://github.com/eduardoberettarod" target="_blank"><img src="public/svgs/github.svg"></a>
+        <a href="https://www.linkedin.com/in/seu-linkedin" target="_blank"><img src="public/svgs/linkedin.svg"></a>
+      </div>
+    </div>
+  </footer>
+  <div class="cursor-light"></div>
+  <script src="javascript/script.js"></script>
+</body>
+
+</html>
