@@ -44,7 +44,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #00cc66;
+    background: #b2f0f8;
     /* cor ao passar o mouse */
 }
 
@@ -71,8 +71,8 @@ section {
 }
 
 :root {
-    --cor-primaria: #4dff89;
-    --cor-segundaria: #1f4023;
+    --cor-primaria: #565ffe;
+    --cor-segundaria: #201f40;
     --cor-fundo: #00150b;
     --margem-padraoX: 5rem;
     /* esquerda e direita */
@@ -211,7 +211,7 @@ section {
 
 .contato-btn:hover {
     filter: drop-shadow(0 0 15px var(--cor-primaria));
-    background: #8cffb2;
+    background: #5391ef;
 }
 
 .text-home {
@@ -700,7 +700,7 @@ section {
 
 .btn-previa:hover {
     transform: scale(1.05);
-    background: #00e68a;
+    background: #2a5cf1;
 }
 
 .icon-previa {
@@ -1053,7 +1053,7 @@ section {
 }
 
 .status.disponivel {
-    background: rgba(0, 255, 0, 0.5);
+    background: rgba(0, 30, 255, 0.5);
     color: white;
     font-family: 'texto';
 }
@@ -1227,7 +1227,7 @@ section {
 }
 
 .btn-download:hover {
-    background: #00cc66;
+    background: #6278f7;
 }
 
 /* Redes sociais */
